@@ -8,13 +8,13 @@ function NavBar(){
                 <img src={process.env.PUBLIC_URL + '/portfoliologo.png'} alt="Logo" />
             </li>
             <li style={{ marginLeft: "70%", padding: '10px' }}>
-                <button  style={{ fontWeight: 400, fontSize: '16px',lineHeight: '24px', display: 'flex', alignItems: 'center', color: '#B0B2C3', background: 'none', border: 'none', padding: 0,cursor: 'pointer'}}>Experience</button>
+                <button  style={{ fontWeight: 400, fontSize: '16px',lineHeight: '24px', display: 'flex', alignItems: 'center', color: '#B0B2C3', background: 'none', border: 'none', padding: 0,cursor: 'pointer', fontFamily: 'League Spartan'}}>Experience</button>
             </li>
             <li style={{ marginLeft: "5%", padding: '10px' }}>
-                <button  style={{ fontWeight: 400, fontSize: '16px',lineHeight: '24px', display: 'flex', alignItems: 'center', color: '#B0B2C3', background: 'none', border: 'none', padding: 0, cursor: 'pointer'}}>Projects</button>
+                <button  style={{ fontWeight: 400, fontSize: '16px',lineHeight: '24px', display: 'flex', alignItems: 'center', color: '#B0B2C3', background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'League Spartan'}}>Projects</button>
             </li>
             <li style={{ marginLeft: "5%", padding: '10px'}}>
-                <button  style={{ fontWeight: 400, fontSize: '16px',lineHeight: '24px', display: 'flex', alignItems: 'center', color: '#B0B2C3', background: 'none',border: 'none',padding: 0,cursor: 'pointer'}}>Contact</button>
+                <button  style={{ fontWeight: 400, fontSize: '16px',lineHeight: '24px', display: 'flex', alignItems: 'center', color: '#B0B2C3', background: 'none',border: 'none',padding: 0,cursor: 'pointer', fontFamily: 'League Spartan'}}>Contact</button>
             </li>
         </ul>
     </div>
