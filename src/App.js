@@ -1,43 +1,29 @@
-import React, { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
+import React, {useState} from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home';
+import ProjectsPage from './Pages/Projects';
+import ContactPage from './Pages/Contact';
 import NavBar from './Components/Navbar';
+import ExpPage from './Pages/Experience';
 import './App.css';
-import WebFont from 'webfontloader';
 
-WebFont.load({
-  google: {
-    families: ['League Spartan:400,700'] // Replace 'YourFontName' with the name of your font and add any additional variations you have (e.g., 400, 700)
-  }
-});
+const App = () => {
 
-function Main() {
-  const typingTextRef = useRef(null);
 
-  useEffect(() => {
-    const options = {
-      strings: ["Hello, I'm Kirsten!", "And I am a Full-Stack Engineer", "Embrace innovation with confidence."],
-      typeSpeed: 50,
-      backSpeed: 20,
-      loop: false
-    };
-  
-    const typed = new Typed(typingTextRef.current, options);
-  
-    return () => {
-      typed.destroy();
-    };
-  }, []);
-  
   return (
-    <div style={{ position: 'absolute', overflowY: 'hidden', height: '100vh', width: '100vw', backgroundColor: "#273469" }}>
-      <div>
+    <Router>
+      <div id='page-container'>
         <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/experience" element={<ExpPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contacts" element={<ContactPage />} />
+        </Routes>
       </div>
-      <div id="typing-text" ref={typingTextRef}>
-
-      </div>
-    </div>
+    </Router>
   );
-}
+};
 
-export default Main;
+export default App;
